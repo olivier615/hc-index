@@ -1,0 +1,155 @@
+{
+  "banners": [
+    {
+      "url": "https://xhcchat.com/resource/images/001.jpg",
+      "group": ["a"]
+    },
+    {
+      "url": "https://xhcchat.com/resource/images/004.jpg",
+      "group": ["b"]
+    },
+    {
+      "url": "https://xhcchat.com/resource/images/003.jpg",
+      "group": ["a", "b"]
+    },
+    {
+      "url": "https://xhcchat.com/resource/images/006.jpg",
+      "group": ["a", "b"]
+    },
+    {
+      "url": "https://xhcchat.com/resource/images/005.jpg",
+      "group": ["a"]
+    },
+    {
+      "url": "https://xhcchat.com/resource/images/007.jpg",
+      "group": ["b"]
+    }
+  ],
+  "notifications": [
+    {
+      "note": "打款请使用上分系统或洽帐房、客服",
+      "group": ["a", "b"]
+    },
+    {
+      "note": "请确认以下客服帐号，确保您的权益",
+      "group": ["a", "b"]
+    }
+  ],
+  "h5Link": [
+    {
+      "link": "https://www.xhc7a.com/chatbet_v3/game/loginweb.php",
+      "group": ["a"]
+    },
+    {
+      "link": "https://www.xhc7b.com/chatbet_v3/game/loginweb.php",
+      "group": ["b"]
+    }
+  ],
+  "wcLink": [
+    {
+      "link": "http://f7a.znbv8az3.cloud/portal3.php?S=HH068",
+      "group": ["a"]
+    },
+    {
+      "link": "http://f2b.ern84rghw.live/portal3.php?S=AB068",
+      "group": ["b"]
+    }
+  ],
+  "onLineServe": [
+    {
+      "link": "https://ad2.2win168.com/member/login",
+      "group": ["a"]
+    },
+    {
+      "link": "https://bd2.2win168.com/member/login",
+      "group": ["b"]
+    }
+  ],
+  "service": [
+    {
+      "name": "瑞丝",
+      "account": "3146523650",
+      "app": "QQ",
+      "group": ["b"],
+      "copied": false
+    },
+    {
+      "name": "琪拉",
+      "account": "xdc668875",
+      "app": "weChat",
+      "group": ["b"],
+      "copied": false
+    },
+    {
+      "name": "莎莉",
+      "account": "23729270",
+      "app": "bat",
+      "group": ["b"],
+      "copied": false
+    },
+    {
+      "name": "洪妃",
+      "account": "3405308040",
+      "app": "QQ",
+      "group": ["a"],
+      "copied": false
+    },
+    {
+      "name": "琪宣",
+      "account": "x77h88c22",
+      "app": "weChat",
+      "group": ["a"],
+      "copied": false
+    },
+    {
+      "name": "唐诗",
+      "account": "24179910",
+      "app": "bat",
+      "group": ["a"],
+      "copied": false
+    },
+    {
+      "name": "芊芊",
+      "account": "35712775422",
+      "app": "tikTok",
+      "group": ["a", "b"],
+      "copied": false
+    },
+    {
+      "name": "依尼",
+      "account": "98317467724",
+      "app": "tikTok",
+      "group": ["a", "b"],
+      "copied": false
+    },
+    {
+      "name": "芷晴",
+      "account": "50057924195",
+      "app": "tikTok",
+      "group": ["a", "b"],
+      "copied": false
+    },
+    {
+      "name": "艾利",
+      "account": "3112288017",
+      "app": "kwai",
+      "group": ["a", "b"],
+      "copied": false
+    },
+    {
+      "name": "莎莉",
+      "account": "3112227931",
+      "app": "kwai",
+      "group": ["a", "b"],
+      "copied": false
+    },
+    {
+      "name": "洪婕",
+      "account": "3112308892",
+      "app": "kwai",
+      "group": ["a", "b"],
+      "copied": false
+    }
+  ],
+  "update": "2022/11/30"
+}

@@ -1,0 +1,21 @@
+.app-icon{
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+}
+
+.app-icon-l {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+}
+
+/* Add numbers to pagination buttons by CSS */
+.splide__pagination {
+  counter-reset: pagination-num;
+}
+
+.splide__pagination__page:before {
+  counter-increment: pagination-num;
+  content: counter( pagination-num );
+}
