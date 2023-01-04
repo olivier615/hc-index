@@ -77,7 +77,7 @@ export default {
         return
       }
       const id = this.data._id
-      this.$http.patch(`${this.url}/${id}`, this.editData)
+      this.$http.patch(`${this.url}/counting/${id}`, this.editData)
         .then(res => {
           this.$emit('update')
           this.hideModal()

@@ -82,7 +82,7 @@ export default {
   },
   methods: {
     getCounting () {
-      this.$http.get(this.url)
+      this.$http.get(this.url + '/counting')
         .then(res => {
           this.data = res.data.data[0]
           let donate = 0
@@ -120,7 +120,7 @@ export default {
     patchCounting () {
       const id = this.data._id
       const newData = { ...this.data }
-      this.$http.patch(`${this.url}/${id}`, newData)
+      this.$http.patch(`${this.url}/counting/${id}`, newData)
         .then(res => {
           this.getCounting()
         })

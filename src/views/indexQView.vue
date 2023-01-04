@@ -1,6 +1,6 @@
 <template>
   <div class="container text-light text-center">
-    <div class="my-5">
+    <div class="mt-5 mb-2">
       <h3 class="mb-3">保存二维码微信扫码进群</h3>
       <div v-show="showQrCode" class="d-flex w-100 justify-content-center">
         <img style="width: 256px; height: 256px" :src="dataURL" :alt="id">
@@ -11,8 +11,15 @@
         </svg>
         {{ note }}
       </div>
+      <!-- <div class="mt-2" id="capture">
+        <p>如出现 <b class="text-danger bg-light">验证错误:无票码</b></p>
+        <p>请点击该画面下方</p>
+        <p><b class="text-dark bg-light">使用完整服务</b>，即可进入大厅</p>
+        <img style="width: 256px" src="https://xhcchat.com/resource/icons/baidu2.png" alt="">
+      </div> -->
     </div>
-    <ul class="row d-flex justify-content-between align-items-center">
+    <!-- <button type=button class="btn btn-primary" @click.prevent="htmlToCanvas">保存二维码</button> -->
+    <ul class="row d-flex justify-content-between align-items-center mt-3">
       <li class="p-3 mb-2">
         <a href="https://www.baidu.com/" target="_blank">
           <div class="imgContainer">
@@ -43,6 +50,8 @@
 
 <script>
 import QRCode from 'qrcode'
+// import html2canvas from 'html2canvas'
+// import canvas2image from '@/libs/canvas2image.js'
 export default {
   data () {
     return {
@@ -94,7 +103,7 @@ export default {
       }
       QRCode.toCanvas(codeToRender, options, (err, canvas) => {
         if (err) throw err
-        const ctx = canvas.getContext('2d')
+        const ctx = canvas.getContext('2d', { willReadFrequently: true })
         const w = canvas.width
         const h = canvas.height
         const fillColor = this.platform === 'a' ? 'maroon' : this.platform === 'b' ? 'darkblue' : ''

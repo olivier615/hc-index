@@ -88,7 +88,7 @@ export default {
         sponsor: this.newSponsor,
         bonus: this.newBonus
       })
-      this.$http.patch(`${this.url}/${id}`, this.editData)
+      this.$http.patch(`${this.url}/counting/${id}`, this.editData)
         .then(res => {
           this.$emit('update')
           this.hideModal()

@@ -2,8 +2,26 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 
 const routes = [
   {
-    path: '/count',
-    component: () => import('../views/countingView.vue')
+    path: '/list',
+    component: () => import('../views/showWinnerView.vue')
+  },
+  {
+    path: '/party',
+    component: () => import('../views/endYearPartyView.vue'),
+    children: [
+      {
+        path: 'count',
+        component: () => import('../views/countingView.vue')
+      },
+      {
+        path: 'draw',
+        component: () => import('../views/luckyDrawView.vue')
+      },
+      {
+        path: 'bonus',
+        component: () => import('../views/bonusView.vue')
+      }
+    ]
   },
   {
     path: '/a',
