@@ -131,7 +131,7 @@ export default {
   mounted () {
     this.getLuckyDraw()
     this.getCounting()
-    // setInterval(() => this.getData(), 20000)
+    setInterval(() => this.getData(), 20000)
   }
 }
 </script>
