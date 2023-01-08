@@ -9,7 +9,7 @@
       <div class="modal-content border-0">
         <div class="modal-header bg-danger text-white">
           <h5 id="editTicketModal" class="modal-title">
-            <span >手動調整流水號</span>
+            <span >調整已賣出抽獎券數量</span>
           </h5>
           <button
             type="button"
@@ -19,9 +19,9 @@
           ></button>
         </div>
         <div class="modal-body">
-          <span>輸入當前即將賣出的第一張流水號碼</span>
+          <span>輸入已賣出抽獎券數量</span>
           <div class="input-group mb-3 mt-2">
-            <span class="input-group-text" id="inputGroup-sizing-default">流水號</span>
+            <span class="input-group-text" id="inputGroup-sizing-default">數量</span>
             <input type="text" class="form-control" v-model="editData.ticket">
           </div>
         </div>

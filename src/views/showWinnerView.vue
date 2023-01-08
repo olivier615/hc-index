@@ -16,7 +16,7 @@
         <div class="fs-5 mb-2 py-2 px-3 d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center bg-semiDark border-out"
         v-for="item in luckyDrawLeft" :key="item._id">
           <div class="">
-            <p>{{ item.order }}. {{ item.content }}</p>
+            <p>{{ item.content }}</p>
           </div>
           <div class="align-self-md-center align-self-end" style="max-width: 40%">
             {{ item.winner }}</div>
@@ -26,7 +26,7 @@
         <div class="fs-5 mb-2 py-2 px-3 d-flex justify-content-between align-items-center bg-semiDark border-out"
         v-for="item in luckyDrawRight" :key="item._id">
           <div class="">
-            <p>{{ item.order }}. {{ item.content }}</p>
+            <p>{{ item.content }}</p>
           </div>
           <div class="" style="max-width: 40%">
             {{ item.winner }}</div>
@@ -95,12 +95,11 @@ export default {
       this.$http.get(this.url + '/counting')
         .then(res => {
           this.data = res.data.data[0]
-          console.log(this.data)
           let donate = 0
           this.data.donate.forEach(item => {
             donate += item.bonus
           })
-          const newJackpot = ((this.data.ticket - 1) * 500) + this.data.basic + donate
+          const newJackpot = (this.data.ticket * 500) + this.data.basic + donate
           if (newJackpot !== this.jackpot) {
             this.playAudio()
           }
@@ -124,7 +123,6 @@ export default {
       this.getCounting()
     },
     playAudio () {
-      this.$refs.audio.src = require('../assets/audio/ring.mp3')
       this.$refs.audio.currentTime = 0
       this.$refs.audio.play()
     },
@@ -133,6 +131,7 @@ export default {
     }
   },
   mounted () {
+    this.$refs.audio.src = require('../assets/audio/ring.mp3')
     this.getLuckyDraw()
     this.getCounting()
     setInterval(() => this.getData(), 20000)

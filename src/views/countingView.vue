@@ -7,7 +7,7 @@
   </div>
   <div class="fs-4 settingContainer text-light d-flex flex-column justify-content-center align-items-center">
     <div class="mb-5 w-100 px-2">
-      <p class="me-3 text-center mb-2">當前流水號</p>
+      <p class="text-center mb-2">已賣出抽獎券數量</p>
       <div class="tabControlContainer d-flex justify-content-center">
         <span class="me-3" @click="sellTicket(-1)"><i class="bi bi-dash-circle"></i></span>
         <p>{{ data.ticket }}</p>
@@ -89,7 +89,7 @@ export default {
           this.data.donate.forEach(item => {
             donate += item.bonus
           })
-          this.sales = ((this.data.ticket - 1) * 500) + this.data.basic + donate
+          this.sales = (this.data.ticket * 500) + this.data.basic + donate
         })
         .catch(err => {
           const info = {
