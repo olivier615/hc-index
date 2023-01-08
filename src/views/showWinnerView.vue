@@ -95,6 +95,7 @@ export default {
       this.$http.get(this.url + '/counting')
         .then(res => {
           this.data = res.data.data[0]
+          console.log(this.data)
           let donate = 0
           this.data.donate.forEach(item => {
             donate += item.bonus
@@ -104,6 +105,9 @@ export default {
             this.playAudio()
           }
           this.jackpot = newJackpot
+          if (this.data.activeManual === true) {
+            this.jackpot = this.data.manual
+          }
           this.renderJackpot()
           this.rollingAnimation()
         })
