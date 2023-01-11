@@ -64,7 +64,6 @@ export default {
         })
     },
     saveOrder () {
-      console.log(this.order)
       const id = this.order._id
       this.$http.patch(`${this.url}/luckyDraw/${id}`, this.order)
         .then(res => {

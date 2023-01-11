@@ -125,9 +125,6 @@ export default {
     playAudio () {
       this.$refs.audio.currentTime = 0
       this.$refs.audio.play()
-    },
-    Login () {
-      this.$socket.emit('login', this.msg)
     }
   },
   mounted () {

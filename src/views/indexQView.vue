@@ -99,7 +99,7 @@ export default {
       const options = {
         errorCorrectionLevel: 'M',
         width: 256,
-        margin: 3
+        margin: 6
       }
       QRCode.toCanvas(codeToRender, options, (err, canvas) => {
         if (err) throw err
@@ -108,15 +108,20 @@ export default {
         const h = canvas.height
         const fillColor = this.platform === 'a' ? 'maroon' : this.platform === 'b' ? 'darkblue' : ''
         ctx.beginPath()
-        ctx.moveTo(w, h - 24)
-        ctx.lineTo(w, h)
-        ctx.lineTo(w - 24, h)
+        ctx.moveTo(w - 24, 0)
+        ctx.lineTo(w, 0)
+        ctx.lineTo(w, 24)
         ctx.fillStyle = fillColor
         ctx.fill()
         ctx.font = '14px/1.6 arial, sans-serif'
         ctx.textAlign = 'center'
         ctx.fillStyle = '#000'
-        ctx.fillText(showId, w / 2, h - 4)
+        ctx.fillText(showId, w / 2, 20)
+        ctx.textAlign = 'center'
+        const text1 = '如出现验证错误:无票码'
+        const text2 = '请点击画面下方 - 使用完整服务'
+        ctx.fillText(text1, w / 2, h - 20)
+        ctx.fillText(text2, w / 2, h - 4)
         this.dataURL = canvas.toDataURL('image/jpeg')
       })
     }

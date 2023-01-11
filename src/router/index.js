@@ -20,6 +20,10 @@ const routes = [
       {
         path: 'bonus',
         component: () => import('../views/bonusView.vue')
+      },
+      {
+        path: 'song',
+        component: () => import('../views/songView.vue')
       }
     ]
   },

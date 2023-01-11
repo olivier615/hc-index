@@ -4,6 +4,7 @@
     <router-link class="btn btn-success mx-2 my-1" to="/party/count">獎池遙控器</router-link>
     <router-link class="btn btn-success mx-2 my-1" to="/party/draw">得獎名單</router-link>
     <router-link class="btn btn-success mx-2 my-1" to="/party/bonus">加碼專區</router-link>
+    <router-link class="btn btn-success mx-2 my-1" to="/party/song">點播歌曲</router-link>
   </ul>
   <router-view/>
 </template>
